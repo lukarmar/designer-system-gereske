@@ -10,8 +10,7 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
-    "host-token-env-variable": "GH_TOKEN"
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
     "phosphor-react": "^1.4.1",
