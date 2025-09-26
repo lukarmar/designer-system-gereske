@@ -35,11 +35,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Build storybook
+      - name: Deploy storybook
         working-directory: ./packages/docs
-        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
-        with:
-          install_command: npm ci
-          build_command: npm run build-storybook
-          path: storybook-static
-          checkout: false
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

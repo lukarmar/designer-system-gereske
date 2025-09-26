@@ -8,6 +8,7 @@
     "build": "turbo run build"
   },
   "devDependencies": {
+    "@storybook/storybook-deployer": "^2.8.16",
     "turbo": "^2.5.5"
   },
   "packageManager": "npm@10.9.3"

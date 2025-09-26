@@ -17,6 +17,12 @@ const config: StorybookConfig = {
     },
   core: {
    "builder": '@storybook/builder-vite',
+  },
+  viteFinal: (config, { configType }) => {
+    if(configType === 'PRODUCTION') {
+      config.base = '/designer-system-gereske/';
+    }
+    return config;
   }
 
 };
